@@ -9,11 +9,11 @@ while True:
         except ValueError:
             print("Please enter a number.")  # Tells the user that they need to enter a number
         numGuesses += 1  # Adds 1 to the number of guesses the user has made
-        if int(userGuess) > randNum:
+        if userGuess > randNum:
             print("Lower!")  # Tells the user that their guess was too high
-        elif int(userGuess) < randNum:
+        elif userGuess < randNum:
             print("Higher!")  # Tells the user that their guess was too low
-        elif int(userGuess) == randNum:
+        elif userGuess == randNum:
             print("You got it! It took you " + str(numGuesses) + " guesses.")  # Tells the user that they got it and how many guesses it took
             break
     if input("Type STOP to stop: ") == "STOP":
