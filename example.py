@@ -2,12 +2,14 @@ import random  # Imports the random module used to generate random numbers
 
 numGuesses = 0  # Keeps track of the number of guesses the user has made
 randNum = random.randint(1, 100)  # Generates a random number between 1 and 100
+userGuess = 0
 while True:
     while True:  # Runs the code forever
         try:
             userGuess = int(input("Guess a number between 1 and 100: "))  # Asks the user to guess a number and turns it into a number
         except ValueError:
             print("Please enter a number.")  # Tells the user that they need to enter a number
+            continue
         numGuesses += 1  # Adds 1 to the number of guesses the user has made
         if userGuess > randNum:
             print("Lower!")  # Tells the user that their guess was too high
